@@ -1,22 +1,52 @@
 <!DOCTYPE html>
-
 <html name="index.html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ани Петрс-Барцумиан</title>
     <style>
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+        }
 
+        header, nav, main, footer {
+            margin: 10px;
+            padding: 10px;
+            background-color: #f0f0f0; /* фон, чтобы лучше видеть границы блоков */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media Query для мобильных устройств */
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+        }
+
+        /* Media Query для планшетов и устройств среднего размера */
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+            header h1 {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Привет, я Ани!</h1>
+        <h1 style="color: blue;">Привет, я Ани!</h1>
         <p><sup>мне 31 год, живу в Ереване</sup></p>
         <img src="C:\Users\ASUS\OneDrive\Изображения\Saved Pictures\zIXm9Qmc1AQ.jpg" alt="я" width="200" height="300">
     </header>
-
+   
     <nav>
         <ul>
             <li><a href="#home">Главная</a></li>
@@ -29,19 +59,19 @@
 
     <main>
         <article id="about">
-            <h2>Обо мне</h2>
+            <h2 style="color: red;">Обо мне</h2>
             <p>Я филолог и преподавательница с большим опытом работы - и тестировщица с не очень большим. Учусь, работаю, <del>воспитываю кошку.</del></p>
             <img src="C:\Users\ASUS\Downloads\Telegram Desktop\IMG_9269.jpg" alt="коша" width="400" height="300">
         </article>
 
         <article id="bio">
-            <h2>Автобиография</h2>
-            <p>Я родилась в Армении, училась в России: на филологическом в универе и на теории музыки в музколледже. Окончила аспирантуру, сейчас готовлю к защите кандидатскую диссертацию по теме <q><strong><em>Феномен литературной мистификации в литературе русских символистов</em></strong></q>.</p>
+            <h2 style="color: green;">Автобиография</h2>
+            <p>Я родилась в <span style="color: red;">Арм</span><span style="color: blue;">ен</span><span style="color: orange;">ии</span>, училась в России: на филологическом в универе и на теории музыки в музколледже. Окончила аспирантуру, сейчас готовлю к защите кандидатскую диссертацию по теме <q><strong><em><span style="color: rgb(144, 15, 122);">Феномен литературной мистификации в литературе русских символистов</span></em></strong></q>.</p>
             <p>Тестирование и программирование изучаю вот уже год как, помимо <em>python</em> изучала основы <em>js</em> на курсе от ЯндексПрактикума и <em>C</em> в школе программирования в Yerevan42. </p>
         </article>
         
         <article id="skills">
-            <h2>Навыки</h2>
+            <h2 style="color: orange">Навыки</h2>
             <ul>
                 <li>Анализ данных</li>
                 <li>Git</li>
@@ -53,32 +83,38 @@
         </article>
 
         <article id="projects">
-            <h2>Проекты</h2>
-            <div>
-                <h3>Проект по Python</h3>                
+            <h2 style="color: rgb(70, 15, 70)">Проекты</h2>
+            
+            <div style="padding-left: 20px;">
+                <h3 style="color: rgb(212, 0, 255);">Проект по Python</h3>
                 <p><a href="https://github.com/anpetrs/TeleBot_project.git">femrulit_birthBot</a><em> - чатбот, который показывает, у кого из русских писательниц/поэтесс когда день рождения.</em></p>
             </div>
-            <div>
-                <h3>Проект по SQL</h3>
+        
+            <div style="padding-left: 20px;">
+                <h3 style="color: rgb(174, 0, 255);">Проект по SQL</h3>
                 <p><em><a href="https://docs.google.com/presentation/d/1tWmDTY6VdHBlRsrdFjcXw0UQEiRBBlaCnOwohg59Q0c/edit?usp=sharing">Анализ платных и бесплатных курсов проекта Курсера за 2023</a></em></p>
             </div>
-            <div>
-                <h3>Проект по Теории тестирования</h3>
+        
+            <div style="padding-left: 20px;">
+                <h3 style="color: rgb(114, 92, 127);">Проект по Теории тестирования</h3>
                 <p><em><a href="https://docs.google.com/presentation/d/1obaR_NGC6zA3Fq-lRMfOHE6n1Vv7BV_Lb2g--RPiAe4/edit?usp=drive_link">Тестовая документация к сайту Ереванского госуниверситета</a></em></p>
             </div>
         </article>
     </main>
-    <br>
 
-    <footer>
-        <article id="contact">
-            <p><u><strong>Связь со мной:</strong></u></p>
-            <address>
-                Email: an.petrs@yandex.ru<br>
-            </address>
-        </article>
-        </footer>
-        <br>
+</main>
+
+<footer>
+    <article id="contact">
+        <h2 style="color: blue;">Контакты</h2>
+        <p><u><strong>Связь со мной:</strong></u></p>
+        <address>
+            Email: an.petrs@yandex.ru<br>
+        </address>
+    </article>
+</footer>
+<br>
 
 </body>
 </html>
+ 
